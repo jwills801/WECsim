@@ -5,13 +5,13 @@ simu.startTime = 0;                     % Simulation Start Time [s]
 simu.rampTime = 100;                    % Wave Ramp Time [s]
 simu.endTime=400;                       % Simulation End Time [s]        
 simu.dt = 0.1;                          % Simulation Time-Step [s]
-
+simu.CITime = 30;                       % (`float`) Convolution integral time. Default = ``60`` s
 %% Wave Information
 % Regular Waves  
-waves = waveClass('regular');              % Initialize waveClass                                
+waves = waveClass('irregular');         % Initialize waveClass                                
 waves.T = 2.5;                          % Wave Period [s]
 waves.H = 8;                          % Wave Height [m]
-
+waves.spectrumType = 'PM';              % Specify Wave Spectrum Type
 %% Body Data
 % Flap
 body(1) = bodyClass('hydroData/oswec.h5');          % Initialize bodyClass for Flap
