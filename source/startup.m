@@ -2,6 +2,6 @@
 % source directory as a 'string'. Copy the code in this file and place 
 % it in your'startup.m' file
 
-wecSimPath = '~/Documents/WEC-Sim/source/';
+wecSimPath = '~/Documents/LiResearch/WEC-SIM/source/';
 addpath(genpath(wecSimPath));
 
